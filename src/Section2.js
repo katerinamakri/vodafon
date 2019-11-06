@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class Page2 extends Component {
+class Section2 extends Component {
 
 	render() {
 		return (
 			<div>
-				Page2
+				Section2
 			</div>
 		);
 	}
 }
 
-export default Page2;
+export default Section2;
