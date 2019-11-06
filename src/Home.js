@@ -1,37 +1,41 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import Section1 from './Section1.js';
 import Section2 from './Section2.js';
 
-class Home extends Component {
+function Home() {
 
-	render() {
-		return (
+	let { path, url } = useRouteMatch();
+
+	// console.log(this.props.homeData)
+	return (
+		<div className="main-container">
+			<h2>Our Sections</h2>
 			<div>
-				<h2>Our Sections</h2>
-				<nav>
+				<nav className="app-main-navigation">
 					<ul>
 						<li>
-							<Link to="/section1">Section 1</Link>
+							<Link to={`${url}/section1`}>Section 1</Link>
 						</li>
 						<li>
-							<Link to="/section2">Section 2</Link>
+							<Link to={`${url}/section2`}>Section 2</Link>
 						</li>
 					</ul>
 				</nav>
 
 				<Switch>
-					<Route exact path="/section1">
+					<Route exact path={path}>
 						<Section1 />
 					</Route>
-					<Route path="/section2">
+					<Route path={`${path}/section2`}>
 						<Section2 />
 					</Route>
 				</Switch>
 			</div>
-		);
-	}
+
+		</div>
+	);
 }
 
 export default Home;
