@@ -12,7 +12,7 @@ class App extends Component {
 		this.state = {
 			menu: [],
 			sliderData: [],
-			homeData: {}
+			homeData: []
 		}
 	}
 
