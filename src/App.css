@@ -50,3 +50,14 @@ ul {
 	min-width: 1166px;
 	margin: 0 auto;
 }
+
+.main-container h2 { color: rgb(7,30,87); }
+
+.sections-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.app-main-navigation { flex-basis: 15%; }
+
+.app-main-navigation a { text-decoration: none; color:rgb(37,54,66); }
