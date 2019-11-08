@@ -8,10 +8,6 @@ function Home(props) {
 
 	let { path, url } = useRouteMatch();
 
-	// for (var i = 0; i < props.homeData.length; i++) {
-	  console.log(props.homeData[0])
-	// }
-	// console.log(props.homeData)
 	return (
 		<div className="main-container">
 			<h2>Our Sections</h2>
@@ -31,7 +27,6 @@ function Home(props) {
 					<Route exact path={path}>
 						<Section1 data={props.homeData[0]} />
 					</Route>
-				{/* NOT WORKING */}
 					<Route path={`${path}/:section2`}>
 						<Section2 data={props.homeData[0]} />
 					</Route>
